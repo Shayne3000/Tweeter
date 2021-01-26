@@ -1,8 +1,12 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-android-extensions'
+    id 'kotlin-allopen'
     id 'kotlin-kapt'
+}
+
+allOpen {
+    annotation("com.senijoshua.tweeter.utils.annotation.TestOpen")
 }
 
 android {
