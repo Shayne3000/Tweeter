@@ -27,7 +27,7 @@ object AndroidBuildConfig {
     const val dataBinding = true
     const val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-    const val kotlin
+    const val kotlinJvmTarget = "1.8"
 }
 
 object Dependencies {
