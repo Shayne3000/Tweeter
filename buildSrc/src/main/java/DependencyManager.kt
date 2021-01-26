@@ -1,6 +1,4 @@
 object Versions {
-    // Android Build Config
-
     // Dependencies
     const val kotlin = "1.4.21"
     const val coreKTX = "1.3.2"
@@ -12,6 +10,24 @@ object Versions {
     const val junit = "4.13.1"
     const val androidJunit = "1.1.2"
     const val espresso = "3.3.0"
+}
+
+object AndroidBuildConfig {
+    const val applicationId = "com.senijoshua.tweeter"
+    const val buildToolsVersion = "30.0.2"
+    const val compileSDKVersion = 30
+    const val minSdkVersion = 21
+    const val targetSDKVersion = 30
+
+    const val versionCode = 1
+    const val versionName = "1.0"
+
+    const val supportVectorDrawables = true
+    const val viewBinding = true
+    const val dataBinding = true
+    const val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+    const val kotlin
 }
 
 object Dependencies {

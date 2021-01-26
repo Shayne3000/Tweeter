@@ -10,22 +10,27 @@ allOpen {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion AndroidBuildConfig.compileSDKVersion
+    buildToolsVersion AndroidBuildConfig.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.senijoshua.tweeter"
-        minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        applicationId AndroidBuildConfig.applicationId
+        minSdkVersion AndroidBuildConfig.minSdkVersion
+        targetSdkVersion AndroidBuildConfig.targetSDKVersion
+        versionCode AndroidBuildConfig.versionCode
+        versionName AndroidBuildConfig.versionName
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner AndroidBuildConfig.testInstrumentationRunner
     }
 
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
