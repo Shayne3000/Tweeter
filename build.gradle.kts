@@ -11,6 +11,8 @@ buildscript {
     }
 }
 
+plugins.apply("plugins.update-dependencies")
+
 allprojects {
     repositories {
         google()
