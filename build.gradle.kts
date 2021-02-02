@@ -11,7 +11,7 @@ buildscript {
     }
 }
 
-plugins.apply("plugins.update-dependencies")
+plugins.apply(AndroidBuildPlugin.updateDependenciesPlugin)
 
 allprojects {
     repositories {

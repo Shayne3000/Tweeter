@@ -3,18 +3,15 @@ package plugins
 import com.github.benmanes.gradle.versions.VersionsPlugin
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 import org.gradle.kotlin.dsl.apply
-import org.gradle.kotlin.dsl.withType
 
 apply<VersionsPlugin>()
 
-tasks {
-    withType<DependencyUpdatesTask>() {
-        resolutionStrategy {
-            componentSelection {
-                all {
-                    if (!isStableVersion(candidate.version) && isStableVersion(currentVersion)) {
-                        reject("Release candidate")
-                    }
+tasks.named("dependencyUpdates", DependencyUpdatesTask::class.java).configure {
+    resolutionStrategy {
+        componentSelection {
+            all {
+                if (!isStableVersion(candidate.version) && isStableVersion(currentVersion)) {
+                    reject("Release candidate")
                 }
             }
         }
@@ -22,7 +19,7 @@ tasks {
 }
 
 fun isStableVersion(version: String): Boolean {
-    val hasStableKeywords = listOf(
+    val unstableVersionKeywords = listOf(
         "alpha",
         "beta",
         "rc",
@@ -31,7 +28,7 @@ fun isStableVersion(version: String): Boolean {
         "preview",
         "b",
         "ea"
-    ).any { !version.toLowerCase().contains(it) }
+    ).any { version.toLowerCase().contains(it) }
     val regex = "^[0-9,.v-]+(-r)?$".toRegex()
-    return hasStableKeywords || regex.matches(version)
+    return !unstableVersionKeywords || regex.matches(version)
 }

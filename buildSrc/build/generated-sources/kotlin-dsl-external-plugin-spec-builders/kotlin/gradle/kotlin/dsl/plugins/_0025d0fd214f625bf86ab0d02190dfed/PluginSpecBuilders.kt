@@ -28,7 +28,7 @@
 
 /* ktlint-disable */
 
-package gradle.kotlin.dsl.plugins._6a51209b0fa6309e552c28e6781b1186
+package gradle.kotlin.dsl.plugins._0025d0fd214f625bf86ab0d02190dfed
 
 import org.gradle.plugin.use.PluginDependenciesSpec
 import org.gradle.plugin.use.PluginDependencySpec
