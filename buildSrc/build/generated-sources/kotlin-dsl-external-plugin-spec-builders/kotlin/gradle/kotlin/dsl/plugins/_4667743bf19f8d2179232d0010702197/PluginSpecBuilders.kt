@@ -28,7 +28,7 @@
 
 /* ktlint-disable */
 
-package gradle.kotlin.dsl.plugins._0025d0fd214f625bf86ab0d02190dfed
+package gradle.kotlin.dsl.plugins._4667743bf19f8d2179232d0010702197
 
 import org.gradle.plugin.use.PluginDependenciesSpec
 import org.gradle.plugin.use.PluginDependencySpec
@@ -48,6 +48,54 @@ class `ComPluginGroup`(internal val plugins: PluginDependenciesSpec)
 internal
 val `PluginDependenciesSpec`.`com`: `ComPluginGroup`
     get() = `ComPluginGroup`(this)
+
+
+/**
+ * The `com.diffplug` plugin group.
+ */
+@org.gradle.api.Generated
+internal
+class `ComDiffplugPluginGroup`(internal val plugins: PluginDependenciesSpec)
+
+
+/**
+ * Plugin ids starting with `com.diffplug`.
+ */
+internal
+val `ComPluginGroup`.`diffplug`: `ComDiffplugPluginGroup`
+    get() = `ComDiffplugPluginGroup`(plugins)
+
+
+/**
+ * The `com.diffplug.gradle` plugin group.
+ */
+@org.gradle.api.Generated
+internal
+class `ComDiffplugGradlePluginGroup`(internal val plugins: PluginDependenciesSpec)
+
+
+/**
+ * Plugin ids starting with `com.diffplug.gradle`.
+ */
+internal
+val `ComDiffplugPluginGroup`.`gradle`: `ComDiffplugGradlePluginGroup`
+    get() = `ComDiffplugGradlePluginGroup`(plugins)
+
+
+/**
+ * The `com.diffplug.gradle.spotless` plugin implemented by [com.diffplug.gradle.spotless.SpotlessPluginRedirect].
+ */
+internal
+val `ComDiffplugGradlePluginGroup`.`spotless`: PluginDependencySpec
+    get() = plugins.id("com.diffplug.gradle.spotless")
+
+
+/**
+ * The `com.diffplug.spotless` plugin implemented by [com.diffplug.gradle.spotless.SpotlessPlugin].
+ */
+internal
+val `ComDiffplugPluginGroup`.`spotless`: PluginDependencySpec
+    get() = plugins.id("com.diffplug.spotless")
 
 
 /**

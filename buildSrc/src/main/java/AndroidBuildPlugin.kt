@@ -6,4 +6,5 @@ object PluginVersion {
 
 object AndroidBuildPlugin {
     const val updateDependenciesPlugin = "plugins.update-dependencies"
+    const val spotless = "plugins.spotless"
 }

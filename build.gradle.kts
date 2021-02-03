@@ -12,14 +12,11 @@ buildscript {
 }
 
 plugins.apply(AndroidBuildPlugin.updateDependenciesPlugin)
+plugins.apply(AndroidBuildPlugin.spotless)
 
 allprojects {
     repositories {
         google()
         jcenter()
     }
-}
-
-tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
 }
