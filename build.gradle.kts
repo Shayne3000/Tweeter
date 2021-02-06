@@ -12,9 +12,11 @@ buildscript {
 }
 
 plugins.apply(AndroidBuildPlugin.updateDependenciesPlugin)
-plugins.apply(AndroidBuildPlugin.spotless)
 
 allprojects {
+    plugins.apply(AndroidBuildPlugin.spotless)
+    plugins.apply(AndroidBuildPlugin.detekt)
+
     repositories {
         google()
         jcenter()

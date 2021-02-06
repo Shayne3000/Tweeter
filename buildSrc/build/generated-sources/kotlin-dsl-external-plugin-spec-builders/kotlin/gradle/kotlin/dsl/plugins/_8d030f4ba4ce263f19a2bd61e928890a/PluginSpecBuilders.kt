@@ -28,7 +28,7 @@
 
 /* ktlint-disable */
 
-package gradle.kotlin.dsl.plugins._4667743bf19f8d2179232d0010702197
+package gradle.kotlin.dsl.plugins._8d030f4ba4ce263f19a2bd61e928890a
 
 import org.gradle.plugin.use.PluginDependenciesSpec
 import org.gradle.plugin.use.PluginDependencySpec
@@ -136,6 +136,62 @@ val `ComGithubPluginGroup`.`ben-manes`: `ComGithubBen-manesPluginGroup`
 internal
 val `ComGithubBen-manesPluginGroup`.`versions`: PluginDependencySpec
     get() = plugins.id("com.github.ben-manes.versions")
+
+
+/**
+ * The `io` plugin group.
+ */
+@org.gradle.api.Generated
+internal
+class `IoPluginGroup`(internal val plugins: PluginDependenciesSpec)
+
+
+/**
+ * Plugin ids starting with `io`.
+ */
+internal
+val `PluginDependenciesSpec`.`io`: `IoPluginGroup`
+    get() = `IoPluginGroup`(this)
+
+
+/**
+ * The `io.gitlab` plugin group.
+ */
+@org.gradle.api.Generated
+internal
+class `IoGitlabPluginGroup`(internal val plugins: PluginDependenciesSpec)
+
+
+/**
+ * Plugin ids starting with `io.gitlab`.
+ */
+internal
+val `IoPluginGroup`.`gitlab`: `IoGitlabPluginGroup`
+    get() = `IoGitlabPluginGroup`(plugins)
+
+
+/**
+ * The `io.gitlab.arturbosch` plugin group.
+ */
+@org.gradle.api.Generated
+internal
+class `IoGitlabArturboschPluginGroup`(internal val plugins: PluginDependenciesSpec)
+
+
+/**
+ * Plugin ids starting with `io.gitlab.arturbosch`.
+ */
+internal
+val `IoGitlabPluginGroup`.`arturbosch`: `IoGitlabArturboschPluginGroup`
+    get() = `IoGitlabArturboschPluginGroup`(plugins)
+
+
+/**
+ * The `io.gitlab.arturbosch.detekt` plugin implemented by [io.gitlab.arturbosch.detekt.DetektPlugin].
+ */
+internal
+val `IoGitlabArturboschPluginGroup`.`detekt`: PluginDependencySpec
+    get() = plugins.id("io.gitlab.arturbosch.detekt")
 
 
 /**

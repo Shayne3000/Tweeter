@@ -44,7 +44,7 @@ configure<SpotlessExtension> {
             fileTree(
                 mapOf(
                     "dir" to ".",
-                    "include" to listOf("**/*.md", "**/.gitignore"),
+                    "include" to listOf("**/*.md", "**/.gitignore", "**/*.yaml", "**/*.yml"),
                     "exclude" to listOf(
                         ".gradle/**",
                         ".gradle-cache/**",
