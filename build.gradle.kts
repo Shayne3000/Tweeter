@@ -13,9 +13,11 @@ buildscript {
 
 plugins.apply(AndroidBuildPlugin.updateDependenciesPlugin)
 
+// Gradle can't find the BaseExtension for detekt when it's applied in allprojects
+plugins.apply(AndroidBuildPlugin.detekt)
+
 allprojects {
     plugins.apply(AndroidBuildPlugin.spotless)
-    plugins.apply(AndroidBuildPlugin.detekt)
 
     repositories {
         google()
