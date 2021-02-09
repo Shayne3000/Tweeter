@@ -2,4 +2,4 @@
 
 echo "Running Static analysis with spotless and detekt..."
 
-gradlew spotlessApply
+gradlew spotlessApply detekt
