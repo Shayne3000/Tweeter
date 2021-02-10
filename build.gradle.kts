@@ -11,6 +11,7 @@ buildscript {
     }
 }
 
+plugins.apply(AndroidBuildPlugin.gitHooks)
 plugins.apply(AndroidBuildPlugin.updateDependenciesPlugin)
 
 // Gradle can't find the BaseExtension for detekt when it's applied in allprojects

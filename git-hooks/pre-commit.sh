@@ -1,5 +1,5 @@
-#!/bin/bash
+#!C:/Program\ Files/Git/usr/bin/sh.exe
 
 echo "Running Static analysis with spotless and detekt..."
 
-gradlew spotlessApply detekt
+./gradlew spotlessApply detekt
