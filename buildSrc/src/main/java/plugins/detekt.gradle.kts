@@ -5,7 +5,7 @@ import io.gitlab.arturbosch.detekt.extensions.DetektExtension
 apply<DetektPlugin>()
 
 configure<DetektExtension> {
-    config =  files("$rootDir/detekt-config.yml")
+    config = files("$rootDir/detekt-config.yml")
     reports {
         // observe findings in your browser with structure and code snippets
         html {
