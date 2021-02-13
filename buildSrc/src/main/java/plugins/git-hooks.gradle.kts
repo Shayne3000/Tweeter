@@ -15,8 +15,7 @@ tasks {
         description = "Installs the pre-commit git hooks from the /git-hooks"
         group = AndroidBuildPlugin.gradleTaskGroup
         workingDir(rootDir)
-        commandLine("chmod")
-        args("-R", "+x", ".git/hooks/")
+        commandLine("cmd", "755", ".git/hooks/")
         dependsOn(named("copyGitHooks"))
 
         doLast {
