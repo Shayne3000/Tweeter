@@ -1,13 +1,31 @@
 version: 2.1
 
-orbs:
-  android: circleci/android@0.2.1
-
 jobs:
   build:
-    executor: android/android
+    working_directory: ~/code
+    docker:
+      - image: circleci/android:api-30-alpha
+
+    environment:
+      JVM_OPTS: -Xmx3200m
 
     steps:
       - checkout
+      - restore_cache:
+            key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
-          command: ./gradlew build
+          name: Download Dependencies
+          command: ./gradlew androidDependencies
+      - save_cache:
+          paths:
+            - ~/.gradle
+          key: jars-{{ checksum "build.gradle.kts" }}-{{ checksum  "app/build.gradle.kts" }}
+# After executing a run command, you can store its build report as a job artifact
+      - run:
+          name: Run static analysis and tests on the app module and build
+          command: ./gradlew :app:clean :app:spotlessCheck :app:test :app:build
+      - store_artifacts:
+            path: app/build/reports
+      - store_test_results:
+            path: app/build/test-results
+
