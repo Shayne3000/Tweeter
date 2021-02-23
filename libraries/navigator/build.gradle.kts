@@ -1,9 +1,9 @@
-//plugins
-//id("com.android.library")
-//id("kotlin-android") {
-//}
+// plugins
+// id("com.android.library")
+// id("kotlin-android") {
+// }
 //
-//android {
+// android {
 //    compileSdkVersion 30
 //    buildToolsVersion "30.0.2"
 //
@@ -30,7 +30,7 @@
 //    kotlinOptions {
 //        jvmTarget = '1.8'
 //    }
-//}
+// }
 
 dependencies {
 
