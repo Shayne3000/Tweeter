@@ -17,6 +17,7 @@ android {
         applicationId = AndroidBuildConfig.applicationId
         minSdkVersion(AndroidBuildConfig.minSdkVersion)
         targetSdkVersion(AndroidBuildConfig.targetSDKVersion)
+
         versionCode = AndroidBuildConfig.versionCode
         versionName = AndroidBuildConfig.versionName
         testInstrumentationRunner = AndroidBuildConfig.testInstrumentationRunner
