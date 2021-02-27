@@ -14,7 +14,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-            key: jars-{{ checksum "build.gradle.kts" }}-{{ checksum  "app/build.gradle.kts" }}
+          key: jars-{{ checksum "build.gradle.kts" }}-{{ checksum  "app/build.gradle.kts" }}
       - run:
           name: Chmod permissions # this is to set proper permissions for Gradlew Dependencies.
           command: sudo chmod +x ./gradlew
@@ -25,14 +25,14 @@ jobs:
           paths:
             - ~/.gradle
           key: jars-{{ checksum "build.gradle.kts" }}-{{ checksum  "app/build.gradle.kts" }}
-# After executing a run command, you can store its build report as a job artifact
+      # After executing a run command, you can store its build report as a job artifact
       - run:
           name: Clean, build, and run tests, and static analysis checks on the App module
           command: ./gradlew :app:clean :app:build :app:spotlessCheck :app:test
       - store_artifacts:
-            path: app/build/reports
+          path: app/build/reports
       - store_test_results:
-            path: app/build/test-results
+          path: app/build/test-results
       - run:
           name: Clean, build, and run tests, and static analysis checks on the Authentication module
           command: ./gradlew :features:authentication:clean :features:authentication:build :features:authentication:spotlessCheck :features:authentication:test
@@ -41,7 +41,7 @@ jobs:
       - store_test_results:
           path: features/authentication/build/test-results
       - run:
-          name: Clean, build, and run tests, and static analysis checks on the Navigation module
+          name: Clean, build, and run tests, and static analysis checks on the Navigator module
           command: ./gradlew :libraries:navigator:clean :libraries:navigator:build :libraries:navigator:spotlessCheck :libraries:navigator:test
       - store_artifacts:
           path: libraries/navigator/build/reports
