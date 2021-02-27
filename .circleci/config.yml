@@ -35,7 +35,7 @@ jobs:
           path: app/build/test-results
       - run:
           name: Clean, build, and run tests, and static analysis checks on the Authentication module
-          command: ./gradlew :features:authentication:clean :features:authentication:build :features:authentication:spotlessCheck :features:authentication:test
+          command: ./gradlew :features:authentication:clean :features:authentication:build :features:authentication:spotlessApply :features:authentication:spotlessCheck :features:authentication:test
       - store_artifacts:
           path: features/authentication/build/reports
       - store_test_results:
