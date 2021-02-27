@@ -62,7 +62,15 @@ configure<SpotlessExtension> {
 
     // formatting rules for xml files
     format("xml") {
-        target("**/res/**/*.xml")
+        target(
+            fileTree(
+                mapOf(
+                    "dir" to ".",
+                    "include" to listOf("**/res/**/*.xml"),
+                    "exclude" to listOf("**/build/**", "**/.*")
+                )
+            )
+        )
         indentWithSpaces()
         trimTrailingWhitespace()
         endWithNewline()
