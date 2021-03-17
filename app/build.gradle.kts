@@ -3,6 +3,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-allopen")
     id("kotlin-kapt")
+    id("com.vanniktech.android.junit.jacoco")
 }
 
 allOpen {
@@ -34,6 +35,7 @@ android {
 
         getByName("release") {
             isMinifyEnabled = true
+            isTestCoverageEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -48,6 +50,10 @@ android {
     kotlinOptions {
         jvmTarget = AndroidBuildConfig.kotlinJvmTarget
     }
+}
+
+junitJacoco {
+    includeNoLocationClasses = true
 }
 
 dependencies {
