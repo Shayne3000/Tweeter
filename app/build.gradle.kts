@@ -55,6 +55,7 @@ android {
 
 junitJacoco {
     includeNoLocationClasses = true
+    excludes = listOf("jdk.internal.*")
 }
 
 dependencies {
