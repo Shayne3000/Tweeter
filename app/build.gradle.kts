@@ -54,12 +54,7 @@ android {
 }
 
 junitJacoco {
-    jacocoVersion = "0.8.4"
-}
-
-tasks.withType<Test>() {
-    junitJacoco.includeNoLocationClasses = true
-    junitJacoco.excludes = listOf("jdk.internal.*")
+    jacocoVersion = "0.8.6"
 }
 
 dependencies {
