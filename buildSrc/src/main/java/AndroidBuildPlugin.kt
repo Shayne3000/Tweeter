@@ -1,5 +1,5 @@
 object PluginVersion {
-    const val kotlin = "1.4.30"
+    const val kotlin = "1.4.31"
 }
 
 object AndroidBuildPlugin {

@@ -41,6 +41,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = AndroidBuildConfig.kotlinJvmTarget
+        useIR = true
     }
 }
 
