@@ -25,3 +25,7 @@ allprojects {
         jcenter()
     }
 }
+
+subprojects {
+    // TODO Setup common settings for all feature and library modules
+}
