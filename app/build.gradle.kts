@@ -55,7 +55,6 @@ android {
 
 junitJacoco {
     jacocoVersion = "0.8.4"
-    includeNoLocationClasses = true
     excludes = listOf("jdk.internal.*")
 }
 
