@@ -47,6 +47,6 @@ jobs:
           path: libraries/navigator/build/reports
       - store_test_results:
           path: libraries/navigator/build/test-results
-      #- run:
-       #   name: Generate code coverage reports
-        #  command: ./gradlew jacocoTestReportDebug
+      - run:
+          name: Generate code coverage reports
+          command: ./gradlew jacocoTestReportDebug
