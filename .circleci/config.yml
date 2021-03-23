@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   android: circleci/android@0.2.1
+  codecov: codecov/codecov@1.0.2
 
 jobs:
   build:
@@ -50,3 +51,7 @@ jobs:
       - run:
           name: Generate code coverage reports
           command: ./gradlew jacocoTestReportDebug
+      - codecov/upload:
+          flags: unittest
+          token: c246ca8c-ba1f-4b2e-9f8b-7f06a35dd6a8
+          conf: .codecov/config.yml
