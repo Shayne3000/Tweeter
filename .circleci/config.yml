@@ -61,14 +61,11 @@ jobs:
           flags: unittest
           file: './app/build/reports/jacoco/debug/jacoco.xml'
           token: c246ca8c-ba1f-4b2e-9f8b-7f06a35dd6a8
-          conf: .codecov/config.yml
       - codecov/upload:
           flags: unittest
           file: './features/authentication/build/reports/jacoco/debug/jacoco.xml'
           token: c246ca8c-ba1f-4b2e-9f8b-7f06a35dd6a8
-          conf: .codecov/config.yml
       - codecov/upload:
           flags: unittest
           file: './libraries/navigator/build/reports/jacoco/debug/jacoco.xml'
           token: c246ca8c-ba1f-4b2e-9f8b-7f06a35dd6a8
-          conf: .codecov/config.yml
