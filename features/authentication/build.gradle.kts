@@ -2,6 +2,7 @@ plugins {
     id("com.android.library")
     id("kotlin-android")
     id("kotlin-kapt")
+    id("com.vanniktech.android.junit.jacoco")
 }
 
 android {
@@ -43,6 +44,10 @@ android {
         jvmTarget = AndroidBuildConfig.kotlinJvmTarget
         useIR = true
     }
+}
+
+junitJacoco {
+    jacocoVersion = "0.8.6"
 }
 
 dependencies {

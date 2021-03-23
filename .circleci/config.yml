@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   android: circleci/android@0.2.1
-  codecov: codecov/codecov@1.0.2
+  codecov: codecov/codecov@1.1.3
 
 jobs:
   build:
@@ -35,12 +35,18 @@ jobs:
       - store_test_results:
           path: app/build/test-results
       - run:
+          name: Generate code coverage reports for the app module
+          command: ./gradlew :app:jacocoTestReportDebug
+      - run:
           name: Clean, build, and run tests, and static analysis checks on the Authentication module
           command: ./gradlew :features:authentication:clean :features:authentication:build :features:authentication:spotlessCheck :features:authentication:test
       - store_artifacts:
           path: features/authentication/build/reports
       - store_test_results:
           path: features/authentication/build/test-results
+      - run:
+          name: Generate code coverage reports for the authentication module
+          command: ./gradlew :features:authentication:jacocoTestReportDebug
       - run:
           name: Clean, build, and run tests, and static analysis checks on the Navigator module
           command: ./gradlew :libraries:navigator:clean :libraries:navigator:build :libraries:navigator:spotlessCheck :libraries:navigator:test
@@ -49,9 +55,20 @@ jobs:
       - store_test_results:
           path: libraries/navigator/build/test-results
       - run:
-          name: Generate code coverage reports
-          command: ./gradlew jacocoTestReportDebug
+          name: Generate code coverage reports for the navigator module
+          command: ./gradlew :libraries:navigator:jacocoTestReportDebug
       - codecov/upload:
           flags: unittest
+          file: './app/build/reports/jacoco/debug/jacoco.xml'
+          token: c246ca8c-ba1f-4b2e-9f8b-7f06a35dd6a8
+          conf: .codecov/config.yml
+      - codecov/upload:
+          flags: unittest
+          file: './features/authentication/build/reports/jacoco/debug/jacoco.xml'
+          token: c246ca8c-ba1f-4b2e-9f8b-7f06a35dd6a8
+          conf: .codecov/config.yml
+      - codecov/upload:
+          flags: unittest
+          file: './libraries/navigator/build/reports/jacoco/debug/jacoco.xml'
           token: c246ca8c-ba1f-4b2e-9f8b-7f06a35dd6a8
           conf: .codecov/config.yml
