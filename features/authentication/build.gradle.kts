@@ -57,6 +57,8 @@ dependencies {
     implementation(Dependencies.materialComponents)
     implementation(Dependencies.constraintLayout)
     testImplementation(Dependencies.junit)
+    testImplementation(Dependencies.junitParams)
+    testImplementation(Dependencies.mockitoKotlin)
     androidTestImplementation(Dependencies.androidJunitExtension)
     androidTestImplementation(Dependencies.espresso)
 }

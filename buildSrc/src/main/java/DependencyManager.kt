@@ -5,6 +5,8 @@ object DependencyVersion {
     const val constraint = "2.0.4"
 
     const val junit = "4.13.1"
+    const val junitParams = "1.1.1"
+    const val mockitoKotlin = "2.2.11"
     const val androidJunit = "1.1.2"
     const val espresso = "3.3.0"
 }
@@ -19,6 +21,8 @@ object Dependencies {
 
     // Test Dependencies
     const val junit = "junit:junit:${DependencyVersion.junit}"
+    const val junitParams = "pl.pragmatists:JUnitParams:${DependencyVersion.junitParams}"
+    const val mockitoKotlin = "org.mockito.kotlin:mockito-kotlin:${DependencyVersion.mockitoKotlin}"
     const val androidJunitExtension = "androidx.test.ext:junit:${DependencyVersion.androidJunit}"
     const val espresso = "androidx.test.espresso:espresso-core:${DependencyVersion.espresso}"
 }

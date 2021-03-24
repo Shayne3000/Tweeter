@@ -56,6 +56,8 @@ dependencies {
     implementation(Dependencies.appCompat)
     implementation(Dependencies.materialComponents)
     testImplementation(Dependencies.junit)
+    testImplementation(Dependencies.junitParams)
+    testImplementation(Dependencies.mockitoKotlin)
     androidTestImplementation(Dependencies.androidJunitExtension)
     androidTestImplementation(Dependencies.espresso)
 }
