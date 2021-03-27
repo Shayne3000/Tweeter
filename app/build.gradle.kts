@@ -60,6 +60,7 @@ junitJacoco {
 dependencies {
     implementation(Dependencies.kotlinStandardLibrary)
     implementation(Dependencies.coreKtx)
+    // TODO put this in the UI components module and inject the module here.
     implementation(Dependencies.appCompat)
     implementation(Dependencies.materialComponents)
     implementation(Dependencies.constraintLayout)

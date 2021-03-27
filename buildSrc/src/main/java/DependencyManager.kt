@@ -3,6 +3,7 @@ object DependencyVersion {
     const val appCompat = "1.2.0"
     const val material = "1.2.1"
     const val constraint = "2.0.4"
+    const val dagger = "2.33"
 
     const val junit = "4.13.1"
     const val junitParams = "1.1.1"
@@ -16,8 +17,19 @@ object Dependencies {
     const val kotlinStandardLibrary = "org.jetbrains.kotlin:kotlin-stdlib:${PluginVersion.kotlin}"
     const val coreKtx = "androidx.core:core-ktx:${DependencyVersion.coreKTX}"
     const val appCompat = "androidx.appcompat:appcompat:${DependencyVersion.appCompat}"
-    const val materialComponents = "com.google.android.material:material:${DependencyVersion.material}"
-    const val constraintLayout = "androidx.constraintlayout:constraintlayout:${DependencyVersion.constraint}"
+    const val materialComponents =
+        "com.google.android.material:material:${DependencyVersion.material}"
+    const val constraintLayout =
+        "androidx.constraintlayout:constraintlayout:${DependencyVersion.constraint}"
+
+    // Dagger
+    const val dagger = "com.google.dagger:dagger:${DependencyVersion.dagger}"
+    const val daggerAndroid = "com.google.dagger:dagger-android:${DependencyVersion.dagger}"
+    const val daggerAndroidSupport =
+        "com.google.dagger:dagger-android-support:${DependencyVersion.dagger}"
+    const val daggerKaptCompiler = "com.google.dagger:dagger-compiler:${DependencyVersion.dagger}"
+    const val daggerKaptProcessor =
+        "com.google.dagger:dagger-android-processor:${DependencyVersion.dagger}"
 
     // Test Dependencies
     const val junit = "junit:junit:${DependencyVersion.junit}"
