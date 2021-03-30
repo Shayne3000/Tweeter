@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/features/authentication" />
             <option value="$PROJECT_DIR$/libraries" />
             <option value="$PROJECT_DIR$/libraries/navigator" />
+            <option value="$PROJECT_DIR$/libraries/rootdi" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
