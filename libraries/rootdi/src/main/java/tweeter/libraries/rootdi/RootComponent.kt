@@ -7,5 +7,4 @@ package tweeter.libraries.rootdi
  *
  * @author Seni Joshua
  */
-interface RootComponent {
-}
+interface RootComponent
