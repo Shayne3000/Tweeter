@@ -7,5 +7,4 @@ import dagger.Module
  * @author Seni Joshua
  */
 @Module
-class AuthenticationModule {
-}
+class AuthenticationModule

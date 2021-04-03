@@ -19,7 +19,7 @@ object AndroidBuildConfig {
 object ProjectModules {
     const val APP = ":app"
 
-    object Features{
+    object Features {
         const val AUTH = ":features:authentication"
     }
 
