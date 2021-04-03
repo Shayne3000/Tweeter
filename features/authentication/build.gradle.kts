@@ -56,6 +56,15 @@ dependencies {
     implementation(Dependencies.appCompat)
     implementation(Dependencies.materialComponents)
     implementation(Dependencies.constraintLayout)
+    // Dagger
+    implementation(Dependencies.dagger)
+    implementation(Dependencies.daggerAndroid)
+    implementation(Dependencies.daggerAndroidSupport)
+    kapt(Dependencies.daggerKaptCompiler)
+    kapt(Dependencies.daggerKaptProcessor)
+    // root dependency module
+    implementation(project(ProjectModules.Libraries.ROOT_DI))
+    // Test Dependencies
     testImplementation(Dependencies.junit)
     testImplementation(Dependencies.junitParams)
     testImplementation(Dependencies.mockitoKotlin)

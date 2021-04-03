@@ -15,3 +15,15 @@ object AndroidBuildConfig {
 
     const val kotlinJvmTarget = "1.8"
 }
+
+object ProjectModules {
+    const val APP = ":app"
+
+    object Features{
+        const val AUTH = ":features:authentication"
+    }
+
+    object Libraries {
+        const val ROOT_DI = ":libraries:rootdi"
+    }
+}

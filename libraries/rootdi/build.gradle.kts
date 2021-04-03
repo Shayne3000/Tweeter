@@ -59,7 +59,7 @@ dependencies {
     implementation(Dependencies.daggerAndroidSupport)
     kapt(Dependencies.daggerKaptCompiler)
     kapt(Dependencies.daggerKaptProcessor)
-
+    // Test dependencies
     testImplementation(Dependencies.junit)
     testImplementation(Dependencies.junitParams)
     testImplementation(Dependencies.mockitoKotlin)

@@ -23,16 +23,18 @@ import tweeter.libraries.rootdi.modules.RootModule
 )
 interface RootComponent {
 
-    fun initFieldInjection()
+    fun initFieldInjection(app: Application)
 
+    /**
+     * Custom builder for binding an instance of the app to this component.
+     */
     @Component.Builder
     interface Builder {
         fun build(): RootComponent
 
         /**
-         * Binds the instance of the application to this component
-         * designating it as the parent component for injecting dependencies
-         * in this app.
+         * Binds the app instance to this component making it the
+         * base component for injecting dependencies in this app.
          */
         @BindsInstance
         fun application(app: Application): Builder

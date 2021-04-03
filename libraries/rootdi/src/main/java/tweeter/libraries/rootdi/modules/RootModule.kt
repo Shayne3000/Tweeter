@@ -4,7 +4,7 @@ import android.app.Application
 import android.content.Context
 import dagger.Module
 import dagger.Provides
-import tweeter.libraries.rootdi.ApplicationScope
+import tweeter.libraries.rootdi.RootScope
 
 /**
  * Root Module that defines application scope dependencies
@@ -14,6 +14,6 @@ import tweeter.libraries.rootdi.ApplicationScope
 class RootModule {
 
     @Provides
-    @ApplicationScope
+    @RootScope
     fun provideContext(application: Application): Context = application.applicationContext
 }
