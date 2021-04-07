@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/libraries" />
             <option value="$PROJECT_DIR$/libraries/navigator" />
             <option value="$PROJECT_DIR$/libraries/rootdi" />
+            <option value="$PROJECT_DIR$/libraries/utils" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

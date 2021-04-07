@@ -7,7 +7,7 @@ plugins {
 }
 
 allOpen {
-    annotation("com.senijoshua.tweeter.utils.annotation.TestOpen")
+    annotation("tweeter.libraries.utils.annotations.TestOpen")
 }
 
 android {
@@ -72,6 +72,7 @@ dependencies {
     kapt(Dependencies.daggerKaptProcessor)
     // root dependency module
     implementation(project(ProjectModules.Libraries.ROOT_DI))
+    implementation(project(ProjectModules.Libraries.UTILS))
     // Test Dependencies
     testImplementation(Dependencies.junit)
     testImplementation(Dependencies.junitParams)

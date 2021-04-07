@@ -25,5 +25,6 @@ object ProjectModules {
 
     object Libraries {
         const val ROOT_DI = ":libraries:rootdi"
+        const val UTILS = ":libraries:utils"
     }
 }

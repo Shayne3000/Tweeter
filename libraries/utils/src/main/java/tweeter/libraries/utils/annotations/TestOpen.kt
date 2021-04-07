@@ -1,4 +1,4 @@
-package com.senijoshua.tweeter.utils.annotations
+package tweeter.libraries.utils.annotations
 
 /**
  * This annotation changes the modifier of a kotlin class

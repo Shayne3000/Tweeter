@@ -58,19 +58,13 @@ junitJacoco {
 dependencies {
     implementation(Dependencies.kotlinStandardLibrary)
     implementation(Dependencies.coreKtx)
-    implementation(Dependencies.appCompat)
-    implementation(Dependencies.materialComponents)
-    implementation(Dependencies.constraintLayout)
     // Dagger
     implementation(Dependencies.dagger)
     implementation(Dependencies.daggerAndroid)
     implementation(Dependencies.daggerAndroidSupport)
     kapt(Dependencies.daggerKaptCompiler)
     kapt(Dependencies.daggerKaptProcessor)
-    // root dependency module
-    implementation(project(ProjectModules.Libraries.ROOT_DI))
-    implementation(project(ProjectModules.Libraries.UTILS))
-    // Test Dependencies
+    // Test dependencies
     testImplementation(Dependencies.junit)
     testImplementation(Dependencies.junitParams)
     testImplementation(Dependencies.mockitoKotlin)

@@ -26,7 +26,7 @@ class TweeterAppConfig : Application(), HasAndroidInjector {
     }
 
     /**
-     * Returns the injected Dagger Android Injector as the injector for
+     * Returns the injected Android Injector from Dagger as the injector for
      * performing injection in Android framework classes within the app
      */
     override fun androidInjector(): AndroidInjector<Any> = dispatchAndroidInjector

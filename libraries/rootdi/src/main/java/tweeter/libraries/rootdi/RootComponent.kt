@@ -1,6 +1,7 @@
 package tweeter.libraries.rootdi
 
 import android.app.Application
+import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -24,6 +25,8 @@ import tweeter.libraries.rootdi.modules.RootModule
 interface RootComponent {
 
     fun initFieldInjection(app: Application)
+
+    fun context(): Context
 
     /**
      * Custom builder for binding an instance of the app to this component.
