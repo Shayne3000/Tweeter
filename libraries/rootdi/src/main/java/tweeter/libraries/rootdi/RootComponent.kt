@@ -15,6 +15,7 @@ import tweeter.libraries.rootdi.modules.RootModule
  *
  * @author Seni Joshua
  */
+@RootScope
 @Component(
     modules = [
         RootModule::class,
