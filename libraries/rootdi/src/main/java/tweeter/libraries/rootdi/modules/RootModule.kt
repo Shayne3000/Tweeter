@@ -13,7 +13,7 @@ import tweeter.libraries.rootdi.RootScope
 @Module
 class RootModule {
 
-    @Provides
     @RootScope
+    @Provides
     fun provideContext(application: Application): Context = application.applicationContext
 }

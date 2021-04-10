@@ -10,3 +10,12 @@ import javax.inject.Scope
 @Scope
 @Retention(AnnotationRetention.RUNTIME)
 annotation class RootScope
+
+/**
+ * Custom dagger annotation that denotes feature module scope
+ *
+ * @author Seni Joshua
+ */
+@Scope
+@Retention(AnnotationRetention.RUNTIME)
+annotation class FeatureScope

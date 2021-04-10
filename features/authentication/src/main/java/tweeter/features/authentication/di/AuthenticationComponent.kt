@@ -1,6 +1,7 @@
 package tweeter.features.authentication.di
 
 import dagger.Component
+import tweeter.libraries.rootdi.FeatureScope
 import tweeter.libraries.rootdi.RootComponent
 
 /**
@@ -8,5 +9,6 @@ import tweeter.libraries.rootdi.RootComponent
  *
  * @author Seni Joshua
  */
+@FeatureScope
 @Component(modules = [AuthenticationModule::class], dependencies = [RootComponent::class])
 interface AuthenticationComponent
