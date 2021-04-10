@@ -24,6 +24,11 @@ android {
         testInstrumentationRunner = AndroidBuildConfig.testInstrumentationRunner
     }
 
+    buildFeatures {
+        viewBinding = true
+        dataBinding = false
+    }
+
     buildTypes {
         getByName("debug") {
             isMinifyEnabled = false
