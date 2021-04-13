@@ -4,6 +4,7 @@ object DependencyVersion {
     const val material = "1.2.1"
     const val constraint = "2.0.4"
     const val dagger = "2.33"
+    const val room = "2.2.6"
 
     const val junit = "4.13.1"
     const val junitParams = "1.1.1"
@@ -30,6 +31,12 @@ object Dependencies {
     const val daggerKaptCompiler = "com.google.dagger:dagger-compiler:${DependencyVersion.dagger}"
     const val daggerKaptProcessor =
         "com.google.dagger:dagger-android-processor:${DependencyVersion.dagger}"
+
+    // Room
+    const val room = "androidx.room:room-runtime:${DependencyVersion.room}"
+    const val roomCompiler = "androidx.room:room-compiler:${DependencyVersion.room}"
+    const val roomCoroutinesSupport = "androidx.room:room-ktx:${DependencyVersion.room}"
+    const val roomTestHelpers = "androidx.room:room-testing:${DependencyVersion.room}"
 
     // Test Dependencies
     const val junit = "junit:junit:${DependencyVersion.junit}"
