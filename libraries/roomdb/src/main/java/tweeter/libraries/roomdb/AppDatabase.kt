@@ -1,4 +1,3 @@
 package tweeter.libraries.roomdb
 
-class AppDatabase {
-}
+class AppDatabase

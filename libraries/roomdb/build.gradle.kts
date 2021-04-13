@@ -54,5 +54,10 @@ dependencies {
     kapt(Dependencies.roomCompiler)
     // Root DI project
     implementation(project(ProjectModules.Libraries.ROOT_DI))
-
+    // Test Dependencies
+    testImplementation(Dependencies.junit)
+    testImplementation(Dependencies.junitParams)
+    testImplementation(Dependencies.mockitoKotlin)
+    androidTestImplementation(Dependencies.androidJunitExtension)
+    androidTestImplementation(Dependencies.espresso)
 }
