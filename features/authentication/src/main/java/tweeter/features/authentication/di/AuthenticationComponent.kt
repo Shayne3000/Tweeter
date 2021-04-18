@@ -1,7 +1,7 @@
 package tweeter.features.authentication.di
 
 import dagger.Component
-import tweeter.libraries.rootdi.FeatureScope
+import tweeter.libraries.root.di.FeatureScope
 import tweeter.libraries.root.di.RootComponent
 
 /**

@@ -21,7 +21,6 @@ class DatabaseModule {
         Room.databaseBuilder(context, TweeterDatabase::class.java, TweeterDatabase.DATABASE_NAME)
             .build()
 
-
     /**
      * This allows one to retrieve data from and persist data to the User entity
      * from anywhere in the app.

@@ -2,10 +2,8 @@ package tweeter.libraries.root.di.modules
 
 import android.app.Application
 import android.content.Context
-import androidx.room.Room
 import dagger.Module
 import dagger.Provides
-import tweeter.libraries.root.database.TweeterDatabase
 import tweeter.libraries.root.di.RootScope
 
 /**
