@@ -48,12 +48,16 @@ android {
 dependencies {
     implementation(Dependencies.kotlinStandardLibrary)
     implementation(Dependencies.coreKtx)
+    // Dagger
+    implementation(Dependencies.dagger)
+    implementation(Dependencies.daggerAndroid)
+    implementation(Dependencies.daggerAndroidSupport)
+    kapt(Dependencies.daggerKaptCompiler)
+    kapt(Dependencies.daggerKaptProcessor)
     // Room
     implementation(Dependencies.room)
     implementation(Dependencies.roomCoroutinesSupport)
     kapt(Dependencies.roomCompiler)
-    // Root DI project
-    implementation(project(ProjectModules.Libraries.ROOT_DI))
     // Test Dependencies
     testImplementation(Dependencies.junit)
     testImplementation(Dependencies.junitParams)

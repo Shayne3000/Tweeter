@@ -2,7 +2,7 @@ package tweeter.features.authentication.di
 
 import dagger.Component
 import tweeter.libraries.rootdi.FeatureScope
-import tweeter.libraries.rootdi.RootComponent
+import tweeter.libraries.root.di.RootComponent
 
 /**
  * Component responsible for injecting dependencies scoped to the authentication module.

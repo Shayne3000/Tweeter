@@ -14,6 +14,8 @@ object AndroidBuildConfig {
     const val testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
     const val kotlinJvmTarget = "1.8"
+
+    const val DATABASE_NAME = "tweeter_db.db"
 }
 
 object ProjectModules {
@@ -24,7 +26,7 @@ object ProjectModules {
     }
 
     object Libraries {
-        const val ROOT_DI = ":libraries:rootdi"
+        const val ROOT = ":libraries:root"
         const val UTILS = ":libraries:utils"
     }
 }

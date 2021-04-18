@@ -5,7 +5,7 @@ import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
 import tweeter.libraries.rootdi.DaggerRootComponent
-import tweeter.libraries.rootdi.RootComponent
+import tweeter.libraries.root.di.RootComponent
 import javax.inject.Inject
 
 /**

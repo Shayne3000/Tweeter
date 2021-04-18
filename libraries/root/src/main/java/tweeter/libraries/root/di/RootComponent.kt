@@ -1,4 +1,4 @@
-package tweeter.libraries.rootdi
+package tweeter.libraries.root.di
 
 import android.app.Application
 import android.content.Context
@@ -6,7 +6,8 @@ import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
 import dagger.android.support.AndroidSupportInjectionModule
-import tweeter.libraries.rootdi.modules.RootModule
+import tweeter.libraries.root.database.dao.UserDao
+import tweeter.libraries.root.di.modules.RootModule
 
 /**
  * Parent component that is responsible for injecting dependencies scoped to
@@ -27,7 +28,17 @@ interface RootComponent {
 
     fun initFieldInjection(app: Application)
 
+    /**
+     * This getter method facilitates access to the [Context] dependency for Components
+     * dependent on the [RootComponent] for injection
+     */
     fun context(): Context
+
+    /**
+     * This getter method facilitates access to the [UserDao] dependency for Components
+     * dependent on the [RootComponent] for injection
+     */
+    fun userDao(): UserDao
 
     /**
      * Custom builder for binding an instance of the app to this component.

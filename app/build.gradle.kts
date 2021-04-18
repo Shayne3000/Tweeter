@@ -76,7 +76,7 @@ dependencies {
     kapt(Dependencies.daggerKaptCompiler)
     kapt(Dependencies.daggerKaptProcessor)
     // root dependency module
-    implementation(project(ProjectModules.Libraries.ROOT_DI))
+    implementation(project(ProjectModules.Libraries.ROOT))
     implementation(project(ProjectModules.Libraries.UTILS))
     // Test Dependencies
     testImplementation(Dependencies.junit)

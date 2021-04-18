@@ -17,8 +17,7 @@
             <option value="$PROJECT_DIR$/features/authentication" />
             <option value="$PROJECT_DIR$/libraries" />
             <option value="$PROJECT_DIR$/libraries/navigator" />
-            <option value="$PROJECT_DIR$/libraries/roomdb" />
-            <option value="$PROJECT_DIR$/libraries/rootdi" />
+            <option value="$PROJECT_DIR$/libraries/root" />
             <option value="$PROJECT_DIR$/libraries/utils" />
           </set>
         </option>

@@ -1,4 +1,4 @@
-package tweeter.libraries.roomdb.dao
+package tweeter.libraries.root.database.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import tweeter.libraries.roomdb.entities.User
+import tweeter.libraries.root.database.entities.User
 
 @Dao
 interface UserDao {

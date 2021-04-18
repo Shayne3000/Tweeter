@@ -1,16 +1,19 @@
-package tweeter.libraries.rootdi.modules
+package tweeter.libraries.root.di.modules
 
 import android.app.Application
 import android.content.Context
+import androidx.room.Room
 import dagger.Module
 import dagger.Provides
-import tweeter.libraries.rootdi.RootScope
+import tweeter.libraries.root.database.TweeterDatabase
+import tweeter.libraries.root.di.RootScope
 
 /**
  * Root Module that defines application scope dependencies
+ *
  * @author Seni Joshua
  */
-@Module
+@Module(includes = [DatabaseModule::class])
 class RootModule {
 
     @RootScope

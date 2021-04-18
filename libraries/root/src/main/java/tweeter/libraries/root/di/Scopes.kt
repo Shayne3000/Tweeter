@@ -1,4 +1,4 @@
-package tweeter.libraries.rootdi
+package tweeter.libraries.root.di
 
 import javax.inject.Scope
 

@@ -1,4 +1,4 @@
-package tweeter.libraries.roomdb.entities
+package tweeter.libraries.root.database.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
