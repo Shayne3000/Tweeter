@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import dagger.Module
 import dagger.Provides
+import tweeter.libraries.root.database.MIGRATION_1_TO_2
 import tweeter.libraries.root.database.TweeterDatabase
 import tweeter.libraries.root.di.RootScope
 
@@ -19,7 +20,7 @@ class DatabaseModule {
     @Provides
     fun provideTweeterDatabase(context: Context) =
         Room.databaseBuilder(context, TweeterDatabase::class.java, TweeterDatabase.DATABASE_NAME)
-            .build()
+            .addMigrations(MIGRATION_1_TO_2).build()
 
     /**
      * This allows one to retrieve data from and persist data to the User entity
