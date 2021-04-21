@@ -5,6 +5,7 @@ object DependencyVersion {
     const val constraint = "2.0.4"
     const val dagger = "2.33"
     const val room = "2.2.6"
+    const val navigation = "2.3.5"
 
     const val junit = "4.13.1"
     const val junitParams = "1.1.1"
@@ -31,6 +32,13 @@ object Dependencies {
     const val daggerKaptCompiler = "com.google.dagger:dagger-compiler:${DependencyVersion.dagger}"
     const val daggerKaptProcessor =
         "com.google.dagger:dagger-android-processor:${DependencyVersion.dagger}"
+
+    // Navigation Component
+    const val navigationFrag =
+        "androidx.navigation:navigation-fragment-ktx:${DependencyVersion.navigation}"
+    const val navigationUI = "androidx.navigation:navigation-ui-ktx:${DependencyVersion.navigation}"
+    const val navigationTest =
+        "androidx.navigation:navigation-testing:${DependencyVersion.navigation}"
 
     // Room
     const val room = "androidx.room:room-runtime:${DependencyVersion.room}"
