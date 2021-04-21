@@ -1,4 +1,3 @@
 package tweeter.libraries.root
 
-class TweeterFragment {
-}
+class TweeterFragment

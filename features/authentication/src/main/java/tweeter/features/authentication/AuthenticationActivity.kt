@@ -6,5 +6,4 @@ package tweeter.features.authentication
  *
  * @author Seni Joshua
  */
-class AuthenticationActivity {
-}
+class AuthenticationActivity
