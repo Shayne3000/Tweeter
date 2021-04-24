@@ -18,7 +18,6 @@ class AuthenticationActivity : TweeterActivity(R.layout.activity_authentication)
     @Inject
     lateinit var androidInjector: DispatchingAndroidInjector<Any>
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
@@ -28,5 +27,4 @@ class AuthenticationActivity : TweeterActivity(R.layout.activity_authentication)
      * Returns the injector that would handle injection in component fragments.
      */
     override fun androidInjector() = androidInjector
-
 }
