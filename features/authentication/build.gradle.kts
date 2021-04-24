@@ -66,13 +66,16 @@ dependencies {
     implementation(Dependencies.appCompat)
     implementation(Dependencies.materialComponents)
     implementation(Dependencies.constraintLayout)
+    // Navigation Component
+    implementation(Dependencies.navigationFrag)
+    implementation(Dependencies.navigationUI)
     // Dagger
     implementation(Dependencies.dagger)
     implementation(Dependencies.daggerAndroid)
     implementation(Dependencies.daggerAndroidSupport)
     kapt(Dependencies.daggerKaptCompiler)
     kapt(Dependencies.daggerKaptProcessor)
-    // root dependency module
+    // root module
     implementation(project(ProjectModules.Libraries.ROOT))
     implementation(project(ProjectModules.Libraries.UTILS))
     // Test Dependencies
