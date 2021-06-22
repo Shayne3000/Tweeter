@@ -28,5 +28,6 @@ object ProjectModules {
     object Libraries {
         const val ROOT = ":libraries:root"
         const val UTILS = ":libraries:utils"
+        const val NAV = ":libraries:navigator"
     }
 }

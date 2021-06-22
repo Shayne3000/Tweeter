@@ -11,6 +11,8 @@ import android.content.Intent
  */
 object Navigator {
 
+    fun goToLoginScreenIntent(context: Context) = internalIntent(context, "action.goto.login")
+
     /**
      * This function helps to restrict implicit intents to the current package
      * of the context. This is to prevent a chooser dialog from popping up if another app

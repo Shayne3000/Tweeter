@@ -78,6 +78,7 @@ dependencies {
     // root dependency module
     implementation(project(ProjectModules.Libraries.ROOT))
     implementation(project(ProjectModules.Libraries.UTILS))
+    implementation(project(ProjectModules.Libraries.NAV))
     // Test Dependencies
     testImplementation(Dependencies.junit)
     testImplementation(Dependencies.junitParams)
