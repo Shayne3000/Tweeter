@@ -3,6 +3,8 @@ package tweeter.libraries.navigator
 import android.content.Context
 import android.content.Intent
 
+private const val LOGIN_SCREEN_ACTION = "action.goto.login"
+
 /**
  * This is responsible for generating properly formatted implicit
  * intents to start Feature activities.
@@ -11,7 +13,7 @@ import android.content.Intent
  */
 object Navigator {
 
-    fun goToLoginScreenIntent(context: Context) = internalIntent(context, "action.goto.login")
+    fun goToLoginScreen(context: Context) = internalIntent(context, LOGIN_SCREEN_ACTION)
 
     /**
      * This function helps to restrict implicit intents to the current package

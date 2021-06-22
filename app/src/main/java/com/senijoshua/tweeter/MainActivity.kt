@@ -10,6 +10,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         // onStart always go to the Login Screen where a conditional navigation will be set to
         // go to home screen if the user is a regular user.
-        Navigator.goToLoginScreenIntent(this)
+        Navigator.goToLoginScreen(this)
     }
 }
