@@ -6,6 +6,7 @@ buildscript {
     }
     dependencies {
         classpath("com.android.tools.build:gradle:4.2.1")
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:${PluginVersion.safeArgs}")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${PluginVersion.kotlin}")
         classpath("org.jetbrains.kotlin:kotlin-allopen:${PluginVersion.kotlin}")
     }
@@ -14,7 +15,7 @@ buildscript {
 plugins.apply(AndroidBuildPlugin.gitHooks)
 plugins.apply(AndroidBuildPlugin.updateDependenciesPlugin)
 
-// Gradle can't find the BaseExtension for detekt when it's applied in allprojects
+// NB: Gradle can't find the BaseExtension for detekt when it's applied in allprojects
 plugins.apply(AndroidBuildPlugin.detekt)
 
 allprojects {
@@ -29,4 +30,7 @@ allprojects {
 
 subprojects {
     // TODO Setup common settings for all feature and library modules
+    afterEvaluate {
+
+    }
 }

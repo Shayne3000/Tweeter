@@ -4,6 +4,7 @@ plugins {
     id("kotlin-kapt")
     id("kotlin-allopen")
     id("com.vanniktech.android.junit.jacoco")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 allOpen {

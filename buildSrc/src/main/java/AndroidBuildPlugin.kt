@@ -1,5 +1,6 @@
 object PluginVersion {
     const val kotlin = "1.5.10"
+    const val safeArgs = "2.3.0"
 }
 
 object AndroidBuildPlugin {
