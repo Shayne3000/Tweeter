@@ -1,15 +1,15 @@
 object DependencyVersion {
-    const val coreKTX = "1.3.2"
-    const val appCompat = "1.2.0"
-    const val material = "1.2.1"
+    const val coreKTX = "1.5.0"
+    const val appCompat = "1.3.0"
+    const val material = "1.3.0"
     const val constraint = "2.0.4"
-    const val dagger = "2.33"
-    const val room = "2.2.6"
+    const val dagger = "2.37"
+    const val room = "2.3.0"
     const val navigation = "2.3.5"
 
-    const val junit = "4.13.1"
+    const val junit = "4.13.2"
     const val junitParams = "1.1.1"
-    const val mockitoKotlin = "2.2.11"
+    const val mockitoKotlin = "3.2.0"
     const val androidJunit = "1.1.2"
     const val espresso = "3.3.0"
 }
