@@ -2,10 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="tweeter.features.authentication">
 
-    <application>
+    <application android:theme="@style/Theme.Tweeter">
         <activity android:name=".AuthenticationActivity">
             <intent-filter>
-                <action android:name="action.goto.login"/>
+                <action android:name="action.goto.login" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
