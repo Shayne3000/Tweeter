@@ -31,5 +31,11 @@ allprojects {
 subprojects {
     // TODO Setup common settings for all feature and library modules
     afterEvaluate {
+        if (project.name == "app") {
+            return@afterEvaluate
+        }
+
+        if (project.hasProperty("android")) {
+        }
     }
 }
