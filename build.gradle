@@ -1,0 +1,80 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:4.2.1")
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:${PluginVersion.safeArgs}")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${PluginVersion.kotlin}")
+        classpath("org.jetbrains.kotlin:kotlin-allopen:${PluginVersion.kotlin}")
+    }
+}
+
+apply plugin: AndroidBuildPlugin.gitHooks
+apply plugin: AndroidBuildPlugin.updateDependenciesPlugin
+
+// NB: Gradle can't find the BaseExtension for detekt when it's applied in allprojects
+apply plugin: AndroidBuildPlugin.detekt
+
+
+
+allprojects {
+    apply plugin: AndroidBuildPlugin.spotless
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+}
+
+subprojects {
+    // NB: This file is using groovy and not kotlin DSL so that we can setup common configurations
+    // for all Library modules in the subprojects closure and eliminate repetition.
+    // This is because the Gradle Kotlin DSL does not yet have type-safe model accessors
+    // for the android {} closure. See: https://stackoverflow.com/questions/60142502/gradle-kotlin-dsl-problems-with-subprojects-and-plugins
+    afterEvaluate {
+        if (project.name == "app") {
+            return
+        }
+
+        if (project.hasProperty("android")) {
+            android {
+                compileSdkVersion AndroidBuildConfig.compileSDKVersion
+                buildToolsVersion AndroidBuildConfig.buildToolsVersion
+
+                defaultConfig {
+                    minSdkVersion AndroidBuildConfig.minSdkVersion
+                    targetSdkVersion AndroidBuildConfig.targetSDKVersion
+
+                    versionCode AndroidBuildConfig.versionCode
+                    versionName AndroidBuildConfig.versionName
+                    testInstrumentationRunner AndroidBuildConfig.testInstrumentationRunner
+                }
+
+                buildTypes {
+                    debug {
+                        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                                'proguard-rules.pro'
+                    }
+
+                    release {
+                        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                                'proguard-rules.pro'
+                    }
+                }
+
+                compileOptions {
+                    sourceCompatibility = JavaVersion.VERSION_1_8
+                    targetCompatibility = JavaVersion.VERSION_1_8
+                }
+
+                kotlinOptions {
+                    jvmTarget = AndroidBuildConfig.kotlinJvmTarget
+                }
+            }
+        }
+    }
+}

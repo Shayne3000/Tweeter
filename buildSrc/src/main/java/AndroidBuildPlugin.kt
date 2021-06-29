@@ -9,4 +9,9 @@ object AndroidBuildPlugin {
     const val detekt = "plugins.detekt"
     const val gitHooks = "plugins.git-hooks"
     const val gradleTaskGroup = "git hooks"
+
+    const val libraryPlugin = "com.android.library"
+    const val kotlinAndroidPlugin = "kotlin-android"
+    const val kotlinKaptPlugin = "kotlin-kapt"
+    const val allOpenPlugin = "kotlin-allopen"
 }
