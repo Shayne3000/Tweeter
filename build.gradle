@@ -2,7 +2,7 @@
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath("com.android.tools.build:gradle:4.2.1")
@@ -18,14 +18,11 @@ apply plugin: AndroidBuildPlugin.updateDependenciesPlugin
 // NB: Gradle can't find the BaseExtension for detekt when it's applied in allprojects
 apply plugin: AndroidBuildPlugin.detekt
 
-
-
 allprojects {
     apply plugin: AndroidBuildPlugin.spotless
 
     repositories {
         google()
-        jcenter()
         mavenCentral()
     }
 }
