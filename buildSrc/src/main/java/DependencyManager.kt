@@ -42,7 +42,7 @@ object Dependencies {
     const val navigationTest =
         "androidx.navigation:navigation-testing:${DependencyVersion.navigation}"
 
-    //ViewModel & LiveData
+    // ViewModel & LiveData
     const val viewModel =
         "androidx.lifecycle:lifecycle-viewmodel-ktx:${DependencyVersion.lifecycleVersion}"
     const val liveData =
