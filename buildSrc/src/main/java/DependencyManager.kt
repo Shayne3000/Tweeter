@@ -6,6 +6,8 @@ object DependencyVersion {
     const val dagger = "2.37"
     const val room = "2.3.0"
     const val navigation = "2.3.5"
+    const val lifecycleVersion = "2.3.1"
+    const val archVersion = "2.1.0"
 
     const val junit = "4.13.2"
     const val junitParams = "1.1.1"
@@ -39,6 +41,16 @@ object Dependencies {
     const val navigationUI = "androidx.navigation:navigation-ui-ktx:${DependencyVersion.navigation}"
     const val navigationTest =
         "androidx.navigation:navigation-testing:${DependencyVersion.navigation}"
+
+    //ViewModel & LiveData
+    const val viewModel =
+        "androidx.lifecycle:lifecycle-viewmodel-ktx:${DependencyVersion.lifecycleVersion}"
+    const val liveData =
+        "androidx.lifecycle:lifecycle-livedata-ktx:${DependencyVersion.lifecycleVersion}"
+    const val viewModelSavedState =
+        "androidx.lifecycle:lifecycle-viewmodel-savedstate:${DependencyVersion.lifecycleVersion}"
+    const val viewModelTestHelpers =
+        "androidx.arch.core:core-testing:${DependencyVersion.archVersion}"
 
     // Room
     const val room = "androidx.room:room-runtime:${DependencyVersion.room}"
