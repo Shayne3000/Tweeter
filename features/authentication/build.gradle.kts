@@ -21,6 +21,11 @@ dependencies {
     implementation(Dependencies.appCompat)
     implementation(Dependencies.materialComponents)
     implementation(Dependencies.constraintLayout)
+    // ViewModel & LiveData
+    implementation(Dependencies.viewModel)
+    implementation(Dependencies.liveData)
+    implementation(Dependencies.viewModelSavedState)
+    kapt(Dependencies.lifeCycleCompiler)
     // Navigation Component
     implementation(Dependencies.navigationFrag)
     implementation(Dependencies.navigationUI)
@@ -35,6 +40,7 @@ dependencies {
     implementation(project(ProjectModules.Libraries.UI))
     implementation(project(ProjectModules.Libraries.UTILS))
     // Test Dependencies
+    testImplementation(Dependencies.viewModelTestHelpers)
     testImplementation(Dependencies.junit)
     testImplementation(Dependencies.junitParams)
     testImplementation(Dependencies.mockitoKotlin)

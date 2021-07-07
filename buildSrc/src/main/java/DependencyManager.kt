@@ -47,6 +47,8 @@ object Dependencies {
         "androidx.lifecycle:lifecycle-viewmodel-ktx:${DependencyVersion.lifecycleVersion}"
     const val liveData =
         "androidx.lifecycle:lifecycle-livedata-ktx:${DependencyVersion.lifecycleVersion}"
+    const val lifeCycleCompiler =
+        "androidx.lifecycle:lifecycle-compiler${DependencyVersion.lifecycleVersion}"
     const val viewModelSavedState =
         "androidx.lifecycle:lifecycle-viewmodel-savedstate:${DependencyVersion.lifecycleVersion}"
     const val viewModelTestHelpers =
