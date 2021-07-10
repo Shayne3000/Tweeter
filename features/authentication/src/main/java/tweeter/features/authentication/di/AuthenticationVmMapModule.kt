@@ -8,13 +8,13 @@ import tweeter.features.authentication.login.LoginViewModel
 import tweeter.libraries.root.di.ViewModelKey
 
 /**
- * This module is responsible for associating a dagger Provider to
- * the LoginViewModel type in dagger's generated map.
+ * This module is responsible for associating Dagger Providers in dagger's generated map
+ * to the ViewModel types in the Authentication Module.
  *
  * @author Seni Joshua
  */
 @Module
-class LoginVmMapModule {
+class AuthenticationVmMapModule {
 
     @Provides
     @IntoMap

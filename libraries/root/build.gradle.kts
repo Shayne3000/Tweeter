@@ -18,6 +18,10 @@ dependencies {
     implementation(Dependencies.daggerAndroidSupport)
     kapt(Dependencies.daggerKaptCompiler)
     kapt(Dependencies.daggerKaptProcessor)
+    // ViewModel
+    implementation(Dependencies.viewModel)
+    implementation(Dependencies.viewModelSavedState)
+    kapt(Dependencies.lifeCycleCompiler)
     // Room
     implementation(Dependencies.room)
     implementation(Dependencies.roomCoroutinesSupport)
