@@ -3,8 +3,9 @@ package tweeter.features.authentication.di
 import dagger.Module
 
 /**
- * Module class that defines dependencies scoped to the Authentication module.
+ * Module class that defines dependencies scoped to the Authentication feature module.
+ * 
  * @author Seni Joshua
  */
-@Module
+@Module(includes = [LoginVmMapModule::class])
 class AuthenticationModule
