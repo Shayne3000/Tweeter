@@ -3,7 +3,6 @@ package tweeter.libraries.root.di
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import java.lang.ClassCastException
-import javax.inject.Inject
 import javax.inject.Provider
 
 /**
@@ -15,7 +14,7 @@ import javax.inject.Provider
  */
 class TweeterViewModelFactory(
     private val providers: Map<Class<out ViewModel>, Provider<ViewModel>>
-) : ViewModelProvider.Factory{
+) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return requireNotNull(getProvider(modelClass).get()) {

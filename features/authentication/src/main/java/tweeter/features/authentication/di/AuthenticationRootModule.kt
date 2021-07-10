@@ -23,6 +23,10 @@ class AuthenticationModule {
         abstract fun bindAuthenticationActivity(): AuthenticationActivity
     }
 
+    /**
+     * Module responsible for installing ViewModels in the authentication module into
+     * the internal subcomponent that accesses the respective bound fragments.
+     */
     @Module
     abstract class FragmentModule {
         @ContributesAndroidInjector(modules = [AuthenticationVmProviderModule::class])
