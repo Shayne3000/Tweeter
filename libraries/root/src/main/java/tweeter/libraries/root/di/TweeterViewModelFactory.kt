@@ -13,7 +13,7 @@ import javax.inject.Provider
  * @author Seni Joshua
  */
 class TweeterViewModelFactory(
-    private val providers: Map<Class<out ViewModel>, Provider<ViewModel>>
+    private val providerMap: Map<Class<out ViewModel>, Provider<ViewModel>>
 ) : ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
@@ -25,7 +25,7 @@ class TweeterViewModelFactory(
     @Suppress("UNCHECKED_CAST")
     private fun <T : ViewModel> getProvider(viewModelClass: Class<T>): Provider<T> =
         try {
-            requireNotNull(providers[viewModelClass] as Provider<T>) {
+            requireNotNull(providerMap[viewModelClass] as Provider<T>) {
                 "No ViewModel provider is associated with the key $viewModelClass"
             }
         } catch (e: ClassCastException) {

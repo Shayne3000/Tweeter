@@ -18,7 +18,7 @@ class AuthenticationModule {
      * in the Authentication Module to be able to perform injection in said activity.
      */
     @Module
-    abstract class ActivityModule {
+    abstract class AuthenticationActivityModule {
         @ContributesAndroidInjector
         abstract fun bindAuthenticationActivity(): AuthenticationActivity
     }
@@ -28,7 +28,7 @@ class AuthenticationModule {
      * the internal subcomponent that accesses the respective bound fragments.
      */
     @Module
-    abstract class FragmentModule {
+    abstract class AuthenticationFragmentModule {
         @ContributesAndroidInjector(modules = [AuthenticationVmProviderModule::class])
         abstract fun bindLoginFragment(): LoginFragment
     }

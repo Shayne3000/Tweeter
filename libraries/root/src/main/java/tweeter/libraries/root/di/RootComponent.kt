@@ -2,6 +2,7 @@ package tweeter.libraries.root.di
 
 import android.app.Application
 import android.content.Context
+import androidx.lifecycle.ViewModelProvider
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -39,6 +40,12 @@ interface RootComponent {
      * dependent on the [RootComponent] for injection
      */
     fun userDao(): UserDao
+
+    /**
+     * This getter method facilitates access to the [TweeterViewModelFactory]
+     * dependency for Components dependent on the [RootComponent] for injection
+     */
+    fun viewModelFactory(): ViewModelProvider.Factory
 
     /**
      * Custom builder for binding an instance of the app to this component.
