@@ -1,4 +1,3 @@
 package tweeter.features.authentication.login
 
-class LoginFragmentState {
-}
+class LoginFragmentState
