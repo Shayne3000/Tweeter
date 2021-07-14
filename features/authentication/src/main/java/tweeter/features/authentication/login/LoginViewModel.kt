@@ -3,6 +3,7 @@ package tweeter.features.authentication.login
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import tweeter.libraries.root.Event
 
 /**
  * [ViewModel] for storing and managing data related to the [LoginFragment].
@@ -10,8 +11,10 @@ import androidx.lifecycle.ViewModel
  * @author Seni Joshua
  */
 class LoginViewModel : ViewModel() {
-    val _state: MutableLiveData<String>? = null
-    val state: LiveData<String>? = _state
+    private val _loginFragmentEvents = MutableLiveData<Event<LoginFragmentEvents>>()
+
+    val loginFragmentEvents: LiveData<Event<LoginFragmentEvents>>
+        get() = _loginFragmentEvents
 
     fun loginUser(): LiveData<String>? = null
 }
