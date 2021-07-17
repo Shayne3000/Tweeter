@@ -1,7 +1,6 @@
 package tweeter.features.authentication.login
 
 import android.os.Bundle
-import androidx.lifecycle.Observer
 import dagger.android.support.AndroidSupportInjection
 import tweeter.features.authentication.R
 import tweeter.libraries.root.TweeterFragment
@@ -28,7 +27,7 @@ class LoginFragment : TweeterFragment(R.layout.fragment_login) {
     }
 
     fun onViewStateChanged(state: LoginFragmentState) {
-        // peform UI actions
+        // perform UI actions when the fragment's state changes
         when (state) {
             is LoginFragmentState.Loading -> {
                 // TODO show the progress bar as we assume
@@ -40,7 +39,8 @@ class LoginFragment : TweeterFragment(R.layout.fragment_login) {
             }
 
             is LoginFragmentState.Error -> {
-
+                // TODO note that an error's occured but in the viewModel
+                //  fire an event for showing the snackbar
             }
         }
     }
