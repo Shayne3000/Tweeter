@@ -1,7 +1,7 @@
 package tweeter.features.authentication.login
 
 /**
- * Class that represents the various UI events in [LoginFragment].
+ * Class that represents the various UI events that occur in the [LoginFragment].
  *
  * @author Seni Joshua
  */

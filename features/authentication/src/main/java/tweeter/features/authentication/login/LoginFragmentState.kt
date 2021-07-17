@@ -1,7 +1,7 @@
 package tweeter.features.authentication.login
 
 /**
- * Class that represents the various states of the [LoginFragment]
+ * Class that represents the various states of the [LoginFragment].
  *
  * @author Seni Joshua
  */

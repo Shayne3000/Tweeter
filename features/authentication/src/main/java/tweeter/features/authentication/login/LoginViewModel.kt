@@ -16,5 +16,10 @@ class LoginViewModel : ViewModel() {
     val loginFragmentEvents: LiveData<Event<LoginFragmentEvents>>
         get() = _loginFragmentEvents
 
+    private val _loginFragmentState = MutableLiveData<LoginFragmentState>()
+
+    val loginFragmentState: LiveData<LoginFragmentState>
+        get() = _loginFragmentState
+
     fun loginUser(): LiveData<String>? = null
 }
