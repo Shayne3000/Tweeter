@@ -2,7 +2,6 @@ package tweeter.libraries.root
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.Observer
 
 /**
  * Wrapper class for event types which are exposed through a [LiveData] observable.
@@ -39,7 +38,8 @@ inline fun <T : Any> LiveData<Event<T>>.observeEvent(
     owner: LifecycleOwner,
     crossinline onEventUnhandled: (T) -> Unit
 ) {
-    observe(owner,
+    observe(
+        owner,
         {
             it?.getEventIfNotHandled()?.let(onEventUnhandled)
         }
