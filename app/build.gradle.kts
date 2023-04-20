@@ -1,6 +1,8 @@
+@file:Suppress("UnstableApiUsage")
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -15,6 +17,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -53,26 +56,24 @@ android {
         kotlinCompilerExtensionVersion = "1.4.4"
     }
 
-    packagingOptions {
+    packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
 }
 
-val compose_version = "1.4.1"
-
 dependencies {
-    implementation("androidx.core:core-ktx:1.10.0")
+    implementation(libs.androidx.ktx)
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation("androidx.activity:activity-compose:1.7.0")
-    implementation("androidx.compose.ui:ui:${compose_version}")
-    implementation("androidx.compose.ui:ui-tooling-preview:${compose_version}")
+    implementation(libs.compose.ui)
+    implementation(libs.compose.ui.tooling.preview)
     implementation("androidx.compose.material3:material3:1.0.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:${compose_version}")
-    debugImplementation("androidx.compose.ui:ui-tooling:${compose_version}")
-    debugImplementation("androidx.compose.ui:ui-test-manifest:${compose_version}")
+    androidTestImplementation(libs.compose.ui.test.junit4)
+    debugImplementation(libs.compose.ui.tooling)
+    debugImplementation(libs.compose.ui.test.manifest)
 }
