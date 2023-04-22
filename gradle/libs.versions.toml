@@ -2,15 +2,23 @@
 androidGradlePlugin = "8.0.0"
 kotlin = "1.8.10"
 composeVersion = "1.4.1"
+composeCompiler = "1.4.4"
+jvmTarget = "17"
 ktx = "1.10.0"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version = "1.7.0"}
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version = "2.6.1"}
+compose-material3 = { group = "androidx.compose.material3", name = "material3", version = "1.0.1"}
 compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "composeVersion"}
 compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "composeVersion"}
 compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview", version.ref = "composeVersion"}
 compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest", version.ref = "composeVersion"}
 compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4", version.ref = "composeVersion"}
+espresso = { group = "androidx.test.espresso", name = "espresso-core", version = "3.5.1"}
+junit = { group = "junit", name = "junit", version = "4.13.2"}
+android-junit-extension = { group = "androidx.test.ext", name = "junit", version = "1.1.5"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin"}
