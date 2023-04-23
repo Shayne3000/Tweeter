@@ -15,3 +15,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Tweeter"
 include(":app")
+include(":features:authentication")
+include(":data:tweets")
+include(":libraries:ui")
