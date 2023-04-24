@@ -1,5 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 pluginManagement {
+    includeBuild("common-build-config")
     repositories {
         google()
         mavenCentral()
@@ -13,6 +14,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+
 rootProject.name = "Tweeter"
 include(":app")
 include(":features:authentication")

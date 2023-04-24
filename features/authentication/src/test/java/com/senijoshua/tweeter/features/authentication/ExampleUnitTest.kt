@@ -1,4 +1,4 @@
-package com.senijoshua.features.auth
+package com.senijoshua.tweeter.features.authentication
 
 import org.junit.Test
 

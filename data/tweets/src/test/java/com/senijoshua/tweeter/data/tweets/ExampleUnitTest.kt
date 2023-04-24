@@ -1,4 +1,4 @@
-package com.senijoshua.libraries.ui
+package com.senijoshua.tweeter.data.tweets
 
 import org.junit.Test
 

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.senijoshua.data.tweets"
+    namespace = "com.senijoshua.tweeter.data.tweets"
     compileSdk = 33
 
     defaultConfig {

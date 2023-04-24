@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.senijoshua.libraries.ui"
+    namespace = "com.senijoshua.tweeter.libraries.ui"
     compileSdk = 33
 
     defaultConfig {
