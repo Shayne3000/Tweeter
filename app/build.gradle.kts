@@ -1,5 +1,5 @@
 @file:Suppress("UnstableApiUsage")
-@Suppress("DSL_SCOPE_VIOLATION")
+@Suppress("DSL_SCOPE_VIOLATION") // TODO remove when Gradle v8.1 is released for a version of kotlin that's compatible with Compose.
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
