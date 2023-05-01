@@ -7,12 +7,12 @@ import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
 
 /**
- * Compose configuration for the Android closure in convention plugins.
+ * Configuration to setup Compose in convention plugins.
  *
  * @author Seni Joshua
  */
 @Suppress("UnstableApiUsage")
-internal fun Project.setupComposeAndroidConfig(commonExtension: CommonExtension<*, *, *, *>,) {
+internal fun Project.setupComposeConfig(commonExtension: CommonExtension<*, *, *, *>,) {
     commonExtension.apply {
         val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
 

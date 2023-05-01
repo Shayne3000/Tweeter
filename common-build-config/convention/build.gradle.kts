@@ -16,5 +16,9 @@ dependencies {
 gradlePlugin{
     plugins {
         // register your convention plugins here
+        register("tweeterLibrary") {
+            id = "tweeter.library.config"
+            implementationClass = "LibraryConfigPlugin"
+        }
     }
 }

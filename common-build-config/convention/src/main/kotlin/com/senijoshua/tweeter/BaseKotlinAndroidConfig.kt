@@ -7,11 +7,11 @@ import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 /**
- * Base configuration for the Android closure in convention plugins.
+ * Base Kotlin and Android SDK version configuration for library modules.
  *
  * @author Seni Joshua
  */
-internal fun Project.setupBaseAndroidConfig(commonExtension: CommonExtension<*, *, *, *>, ) {
+internal fun Project.setupBaseKotlinAndroidConfig(commonExtension: CommonExtension<*, *, *, *>, ) {
     commonExtension.apply {
         compileSdk =  33
 

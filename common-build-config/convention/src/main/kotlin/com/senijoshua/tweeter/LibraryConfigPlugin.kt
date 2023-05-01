@@ -17,20 +17,20 @@ import org.gradle.kotlin.dsl.kotlin
 class LibraryConfigPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            with(pluginManager) {
+            pluginManager.apply {
                 apply("com.android.library")
                 apply("org.jetbrains.kotlin.android")
             }
 
             extensions.configure<LibraryExtension> {
-                setupBaseAndroidConfig(this)
+                setupBaseKotlinAndroidConfig(this)
             }
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
 
             configurations.configureEach {
                 resolutionStrategy {
-                    // Run tests with Junit4
+                    // TODO Do we really need this?
                     force(libs.findLibrary("junit4").get())
                 }
             }
@@ -38,8 +38,8 @@ class LibraryConfigPlugin : Plugin<Project> {
             dependencies {
                 // Kotlin test library dependency for annotating test cases and test assertions
                 // see: https://kotlinlang.org/api/latest/kotlin.test/
-                add("androidTestImplementation", kotlin("test"))
                 add("testImplementation", kotlin("test"))
+                add("androidTestImplementation", kotlin("test"))
             }
         }
     }
