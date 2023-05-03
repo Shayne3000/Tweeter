@@ -3,7 +3,7 @@ androidGradlePlugin = "8.0.0"
 kotlin = "1.8.10"
 composeBom = "2023.04.01"
 composeCompiler = "1.4.4"
-jvmTarget = "17"
+kotlinJvmTarget = "17"
 ktx = "1.10.0"
 ksp = "1.8.10-1.0.9"
 

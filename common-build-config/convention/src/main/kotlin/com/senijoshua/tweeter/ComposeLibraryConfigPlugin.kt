@@ -6,7 +6,7 @@ import org.gradle.api.Project
 import org.gradle.kotlin.dsl.getByType
 
 /**
- * Convention plugin for sharing compose configuration across library modules.
+ * Convention plugin for provisioning and sharing compose configuration across library modules.
  *
  * @author Seni Joshua
  */
