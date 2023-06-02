@@ -1,5 +1,3 @@
-package com.senijoshua.tweeter
-
 import com.android.build.api.dsl.LibraryExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -10,36 +8,34 @@ import org.gradle.kotlin.dsl.getByType
 import org.gradle.kotlin.dsl.kotlin
 
 /**
- * Convention plugin for sharing common build configuration across library modules.
+ * Convention plugin for sharing common build configuration across feature modules.
  *
  * @author Seni Joshua
  */
-class LibraryConfigPlugin : Plugin<Project> {
+class FeatureConfigPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            pluginManager.apply {
-                apply("com.android.library")
-                apply("org.jetbrains.kotlin.android")
+            pluginManager.apply{
+                apply("tweeter.library.config")
             }
 
             extensions.configure<LibraryExtension> {
-                setupBaseKotlinAndroidConfig(this)
+                defaultConfig {
+                    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+                }
             }
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
 
-            configurations.configureEach {
-                resolutionStrategy {
-                    // TODO Do we really need this?
-                    force(libs.findLibrary("junit4").get())
-                }
-            }
-
             dependencies {
-                // Kotlin test library dependency for annotating test cases and test assertions
-                // see: https://kotlinlang.org/api/latest/kotlin.test/
+                add("implementation", project(":libraries:ui"))
+                add("implementation", libs.findLibrary("androidx.ktx").get())
+
+                // Test dependencies
                 add("testImplementation", kotlin("test"))
                 add("androidTestImplementation", kotlin("test"))
+                add("androidTestImplementation", libs.findLibrary("espresso").get())
+                add("androidTestImplementation", libs.findLibrary("android.junit.extension").get())
             }
         }
     }

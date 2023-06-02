@@ -1,11 +1,11 @@
 [versions]
-androidGradlePlugin = "8.0.0"
-kotlin = "1.8.10"
+androidGradlePlugin = "8.0.2"
+kotlin = "1.8.20"
 composeBom = "2023.04.01"
-composeCompiler = "1.4.4"
+composeCompiler = "1.4.6"
 kotlinJvmTarget = "17"
 ktx = "1.10.0"
-ksp = "1.8.10-1.0.9"
+ksp = "1.8.20-1.0.11"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
