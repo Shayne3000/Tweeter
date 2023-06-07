@@ -25,10 +25,6 @@ tasks {
         group = "git hooks"
         delete(fileTree(".git/hooks/"))
     }
-    // TODO: Uncomment afterwards
-//    afterEvaluate {
-//        tasks["clean"].dependsOn(tasks.named("installGitHooks"))
-//    }
 }
 
-fun isLinuxOrMacOs() = System.getProperty("os.name").toLowerCase(Locale.De) in listOf("linux", "mac os", "macos")
+fun isLinuxOrMacOs() = System.getProperty("os.name").toLowerCase() in listOf("linux", "mac os", "macos")

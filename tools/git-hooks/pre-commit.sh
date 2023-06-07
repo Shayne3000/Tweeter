@@ -3,7 +3,6 @@ echo "Running pre-commit static analysis and formatting checks..."
 
 ./gradlew detekt
 ./gradlew spotlessCheck
-# todo replace with a call to the gradle init script for spotless and detekt like nowInAndroid
 
 STATUS=$?
 

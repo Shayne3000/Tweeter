@@ -11,6 +11,6 @@ tasks.named("detekt").configure {
     reports {
         // Enable/Disable Markdown report
         md.required.set(true)
-        md.outputLocation.set((project.file("build/reports/detekt/detekt.md"))
+        md.outputLocation.set((project.file("build/reports/detekt/detekt.md")))
     }
 }

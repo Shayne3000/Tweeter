@@ -1,7 +1,9 @@
-import com.diffplug.gradle.spotless.SpotlessExtension
-import com.diffplug.gradle.spotless.SpotlessPlugin
+//import com.diffplug.gradle.spotless.SpotlessExtension
+//import com.diffplug.gradle.spotless.SpotlessPlugin
+//
+//apply<SpotlessPlugin>()
 
-apply<SpotlessPlugin>()
+apply(plugin = "com.diffplug.spotless")
 
 configure<SpotlessExtension> {
     // Formatting rules for kotlin

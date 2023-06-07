@@ -2,7 +2,6 @@
  * Gradle script for applying the spotless and detekt plugins
  * to all modules in the project.
  */
-
 initscript {
     repositories {
         mavenCentral()
