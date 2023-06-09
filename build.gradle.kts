@@ -11,6 +11,35 @@ plugins {
 apply(from = "$rootDir/tools/git-hooks/git-hooks.gradle.kts")
 
 allprojects{
-    // apply(from = "$rootDir/tools/spotless/spotless.gradle.kts")
-    apply(from = "$rootDir/tools/detekt/detekt.gradle.kts")
+    if (this == rootProject) {
+        return@allprojects
+    }
+
+    apply<com.diffplug.gradle.spotless.SpotlessPlugin>()
+    configure<com.diffplug.gradle.spotless.SpotlessExtension> {
+        // Formatting rules for kotlin
+        kotlin {
+            target("**/*.kt")
+            targetExclude("**/build/**/*.kt")
+            ktlint("0.46.0")
+        }
+
+        // Formatting rules for .kts files which are primarily gradle scripts
+        format("kts") {
+            target("**/*.kts")
+            targetExclude("**/build/**/*.kts")
+        }
+
+        // Rules for xml files such as the AndroidManifest.xml file.
+        format("xml") {
+            target("**/*.xml")
+            targetExclude("**/build/**/*.xml")
+        }
+    }
+
+    apply<io.gitlab.arturbosch.detekt.DetektPlugin>()
+
+    configure<io.gitlab.arturbosch.detekt.extensions.DetektExtension> {
+        config = files("$rootDir/tools/detekt/config.yml")
+    }
 }
