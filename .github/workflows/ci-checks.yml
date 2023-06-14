@@ -1,0 +1,86 @@
+# A workflow that runs on pushes to the master branch
+
+name: CI Checks
+on:
+  push:
+    branches:
+      - 'main'
+  workflow_dispatch:
+
+# Cancel in-progress runs if a push tonmaster occurs during the run
+concurrency:
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  code-format-and-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup JDK 11
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 11
+
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@ccb4328a959376b642e027874838f60f8e596de3
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2.4.2
+
+      - name: Run Spotless and Detekt Checks
+        run: ./gradlew spotlessCheck detekt --stacktrace
+
+  build:
+    needs: code-format-and-analysis
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup JDK 11
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 11
+
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@ccb4328a959376b642e027874838f60f8e596de3
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2.4.2
+
+      - name: Build Project
+        run: ./gradlew build --stacktrace
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup JDK 11
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 11
+
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@ccb4328a959376b642e027874838f60f8e596de3
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2.4.2
+
+      - name: Run unit tests
+        run: ./gradlew test --stacktrace
+      # TODO if plausible later down the line, run instrumentation tests too.
