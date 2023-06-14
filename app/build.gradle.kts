@@ -3,6 +3,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("tweeter.application.compose.config")
 }
 
 android {
@@ -46,14 +47,6 @@ android {
 
     kotlinOptions {
         jvmTarget = libs.versions.kotlinJvmTarget.get()
-    }
-
-    buildFeatures {
-        compose = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
 
     packaging {
