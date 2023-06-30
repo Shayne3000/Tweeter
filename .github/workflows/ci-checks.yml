@@ -7,7 +7,7 @@ on:
       - 'main'
   workflow_dispatch:
 
-# Cancel in-progress runs if a push tonmaster occurs during the run
+# Cancel in-progress runs if a push to master occurs during the run
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
