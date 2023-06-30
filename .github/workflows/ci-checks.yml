@@ -1,4 +1,4 @@
-# A workflow that runs on pushes to the master branch
+# A workflow that runs on push to the main branch
 
 name: CI Checks
 on:
@@ -7,7 +7,7 @@ on:
       - 'main'
   workflow_dispatch:
 
-# Cancel in-progress runs of this workflow if a push to master occurs during the run
+# Cancel in-progress runs of this workflow if a push to main occurs during the run
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
