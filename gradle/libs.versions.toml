@@ -6,6 +6,7 @@ composeCompiler = "1.4.6"
 kotlinJvmTarget = "17"
 ktx = "1.10.0"
 ksp = "1.8.20-1.0.11"
+hilt = "2.46.1"
 
 [libraries]
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
@@ -19,6 +20,8 @@ compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling
 compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 espresso = { group = "androidx.test.espresso", name = "espresso-core", version = "3.5.1"}
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt"}
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 junit4 = { group = "junit", name = "junit", version = "4.13.2"}
 android-junit-extension = { group = "androidx.test.ext", name = "junit", version = "1.1.5"}
 # Dependencies for the included build, common-build-config
@@ -30,3 +33,4 @@ ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devto
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin"}
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin"}
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin"}
+hilt = {id = "com.google.dagger.hilt.android", version.ref = "hilt"}

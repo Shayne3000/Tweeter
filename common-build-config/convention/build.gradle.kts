@@ -29,6 +29,11 @@ gradlePlugin{
             implementationClass = "ComposeAppConfigPlugin"
         }
 
+        register("tweeterHilt") {
+            id = "tweeter.hilt.config"
+            implementationClass = "HiltConfigPlugin"
+        }
+
         register("tweeterLibraryCompose") {
             id = "tweeter.library.compose.config"
             implementationClass = "ComposeLibraryConfigPlugin"
