@@ -5,7 +5,7 @@ import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
 
 /**
- * Convention plugin to share hilt configuration across modules.
+ * Convention plugin to share hilt configuration across modules that use Hilt.
  *
  * @author Seni Joshua
  */

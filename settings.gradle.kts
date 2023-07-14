@@ -1,4 +1,5 @@
 @file:Suppress("UnstableApiUsage")
+
 pluginManagement {
     includeBuild("common-build-config")
     repositories {
@@ -21,3 +22,5 @@ include(":app")
 include(":features:authentication")
 include(":data:tweets")
 include(":libraries:ui")
+include(":libraries:network")
+
