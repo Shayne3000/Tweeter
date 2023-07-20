@@ -1,8 +1,7 @@
 #!/bin/sh
 echo "Running pre-commit static analysis and formatting checks..."
 
-./gradlew detekt
-./gradlew spotlessCheck
+./gradlew detekt spotlessCheck
 
 STATUS=$?
 
